@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  build-service2:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "hello from service2   
+
+
+workflows:
+  main-workflow:
+    jobs:
+      - build-service2
+
+# VS Code Extension Version: 1.1.1

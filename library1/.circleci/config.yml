@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  build-library1:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "hello from library1"
+    
+
+
+workflows:
+  main-workflow:
+    jobs:
+      - build-library1
+
+# VS Code Extension Version: 1.1.1

@@ -1,0 +1,29 @@
+version: 2.1
+
+orbs:
+  config-splitting: circle-makotom-orbs/config-splitting@0.0.8
+
+setup: true
+
+
+jobs:
+  build-shared:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "hello from my shared job"
+    
+
+
+workflows:
+  main-workflow:
+    jobs:
+      - build-shared # this job will always run
+      - config-splitting/run-modular-configs-selectively:
+          module-list-file: .circleci/list-of-dirs-to-monitor.txt
+          base-revision: main
+          requires:
+            - build-shared
+
+# VS Code Extension Version: 1.1.1
