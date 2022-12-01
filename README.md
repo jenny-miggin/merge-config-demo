@@ -16,4 +16,8 @@ service1/.circleci/config.yml
 library1/.circleci/config.yml
 ```
 
-This means that both configs will be merged at runtime 
+This means that both configs will be merged at runtime if there are any changes within `service1`
+
+### What would be the use case for this?
+
+If, for example, there are changes to a service, you may want to ensure that the library that the service depends on is fully up-to-date, tested and deployed. This also means that changes to `library1` do *not* trigger a pipeline
