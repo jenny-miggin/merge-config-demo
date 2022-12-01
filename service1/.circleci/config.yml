@@ -10,7 +10,7 @@ jobs:
 
 
 workflows:
-  main-workflow:
+  service1-workflow:
     jobs:
       - build-service1
 

@@ -7,11 +7,9 @@ jobs:
     steps:
       - checkout
       - run: echo "hello from library1"
-    
-
 
 workflows:
-  main-workflow:
+  library1-workflow:
     jobs:
       - build-library1
 
