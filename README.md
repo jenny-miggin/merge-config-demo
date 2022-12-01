@@ -18,6 +18,8 @@ library1/.circleci/config.yml
 
 This means that both configs will be merged at runtime if there are any changes within `service1`
 
+If there are any changes to `service2`, then just that config will be used as there are no dependencies
+
 ### What would be the use case for this?
 
 If, for example, there are changes to a service, you may want to ensure that the library that the service depends on is fully up-to-date, tested and deployed. This also means that changes to `library1` do *not* trigger a pipeline
