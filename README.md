@@ -4,6 +4,8 @@
 
 In the `selectively-merge-config` branch, there are 2 paths.
 
+Regardless of any changes in sub-directories, the main workflow in `.circleci/config.yml`, and the shared jobs within this, will always run
+
 ### How does it work?
 
 In `service1/.circleci/config.yml` there is a standard workflow
