@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   config-splitting: circle-makotom-orbs/config-splitting@0.0.8
 
-setup: false
+setup: true
 
 
 jobs:
