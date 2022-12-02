@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export OUTPUT="output.txt"
+
 touch "${OUTPUT}"
 
 DIFFS=$(
