@@ -19,7 +19,7 @@ workflows:
     jobs:
       - build-shared # this job will always run
       - config-splitting/run-modular-configs-selectively:
-          module-list-file: list-of-dirs-to-monitor.txt
+          module-list-file: .circleci/list-of-dirs-to-monitor.txt
           base-revision: main
           requires:
             - build-shared
