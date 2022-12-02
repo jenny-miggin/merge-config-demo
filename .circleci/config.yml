@@ -22,7 +22,7 @@ jobs:
       - run: 
           name: generate output
           command: |
-            chmod +x .circleci/generate-output.sh && ./.circleci/generate-output.sh
+            chmod +x .circleci/generate-output.sh && sh .circleci/generate-output.sh
 
 
 
@@ -30,7 +30,7 @@ jobs:
 workflows:
   main-workflow:
     jobs:
-      - build-shared # this job will always run
+      #- build-shared # this job will always run
       - echo-output
       # - config-splitting/run-modular-configs-selectively:
       #     module-list-file: .circleci/list-of-dirs-to-monitor.txt
