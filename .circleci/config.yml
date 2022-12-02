@@ -22,7 +22,7 @@ jobs:
       - run: 
           name: generate output
           command: |
-            chmod +x .circleci/generate-output.sh && ./generate-output.sh
+            chmod +x .circleci/generate-output.sh && ./.circleci/generate-output.sh
 
 
 
